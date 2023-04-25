@@ -32,14 +32,14 @@ const Header = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6 d-flex align-items-center display-none">
-              <p>0866608666</p>
+              <p>0858040403</p>
               <p>dhcn@gmail.com</p>
             </div>
             <div className=" col-12 col-lg-6 justify-content-center justify-content-lg-end d-flex align-items-center">
-              <Link to="https://www.facebook.com/NHVLCN">
+              <Link to="https://www.facebook.com/profile.php?id=100028502835503">
                 <i className="fab fa-facebook-f"></i>
               </Link>
-              <Link to="https://www.instagram.com/">
+              <Link to="https://www.instagram.com/ch.ouchou4903/">
                 <i className="fab fa-instagram"></i>
               </Link>
               <Link to="https://www.linkedin.com/">

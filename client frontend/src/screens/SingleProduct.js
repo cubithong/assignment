@@ -88,7 +88,7 @@ const SingleProduct = ({ history, match }) => {
                           <Link to={`/products/shops/${product.shop_name}`}
                           className="text-capitalize"
                           // bold
-                          style={{ color: "blue", fontWeight: "bold"}}
+                          style={{ color: "#cc6600", fontWeight: "bold"}}
                           >
                                 {product.shop_name}
                           </Link>
