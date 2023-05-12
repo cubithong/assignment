@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Header from "../components/Header";
 import ProfileTabs from "../components/profileComponents/ProfileTabs";
@@ -11,7 +11,7 @@ const ProfileScreen = () => {
   window.scrollTo(0, 0);
 
   const dispatch = useDispatch();
-
+  const [avatar, setAvatar] = useState("./images/user.png");
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
   const orderListMy = useSelector((state) => state.orderListMy);
@@ -32,7 +32,26 @@ const ProfileScreen = () => {
               <div className="author-card-cover"></div>
               <div className="author-card-profile row">
                 <div className="author-card-avatar col-md-5">
-                  <img src="./images/user.png" alt="userprofileimage" />
+                  <img src={avatar} />
+                  {/* get input from file */}
+                  <input
+                    type="file"
+                    id="file"
+                    style={{ display: "none" }}
+                    accept="image/*"
+                    // Chuẩn hóa ảnh
+                    onChange={(e) => {
+                      const file = e.target.files[0];
+                      const reader = new FileReader();
+                      reader.readAsDataURL(file);
+                      reader.onloadend = () => {
+                        setAvatar(reader.result);
+                      };
+                    }}
+                  />  
+                  <label for="file" className="btn btn-outline-primary">
+                    Change now
+                  </label>
                 </div>
                 <div className="author-card-details col-md-7">
                   <h5 className="author-card-name mb-2">
@@ -109,5 +128,25 @@ const ProfileScreen = () => {
     </>
   );
 };
-
+const profileAvatarHandle = () => {
+  // create input bar
+  const input = document.createElement("input");
+  input.type = "file";
+  input.accept = "image/*";
+  input.click();
+  // add event listener
+  input.addEventListener("change", () => {
+    const file = input.files[0];
+    if (file) {
+      // create a reader
+      const reader = new FileReader();
+      reader.addEventListener("load", () => {
+        localStorage.setItem("profilePic", reader.result);
+        window.location.reload();
+      });
+      reader.readAsDataURL(file);
+    }
+  });
+  return localStorage.getItem("profilePic");
+};
 export default ProfileScreen;

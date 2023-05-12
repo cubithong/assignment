@@ -34,7 +34,7 @@ const SingleShop = ({ history, match }) => {
   useEffect(() => {
    
     if (successCreateReview) {
-      alert("Review Submitted");
+      // alert("Review Submitted");
       setRating(0);
       setComment("");
       dispatch({ type: SHOP_CREATE_REVIEW_SUCCESS });

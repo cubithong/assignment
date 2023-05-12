@@ -123,7 +123,10 @@ productRoute.get(
             $options: "i",
           },
         }
-      : {};
+      : {
+          //message: "Product not found", //
+          alert: "Product not found",
+      };
     const count = await Product.countDocuments({ ...keyword });
     const products = await Product.find({ ...keyword })
       .limit(pageSize)

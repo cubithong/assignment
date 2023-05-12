@@ -59,7 +59,6 @@ const FilterBar = () => {
                 placeholder="Price min"
               className="form-control"
               id="price_min"
-              // value={filters.price}
               onChange={handleInput("price_min")}
             />
           </div>
