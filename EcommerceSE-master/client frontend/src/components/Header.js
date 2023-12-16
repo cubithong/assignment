@@ -33,7 +33,7 @@ const Header = () => {
           <div className="row">
             <div className="col-md-6 d-flex align-items-center display-none">
               <p>0858040403</p>
-              <p>dhcn@gmail.com</p>
+              <p>minhthong2003@gmail.com</p>
             </div>
             <div className=" col-12 col-lg-6 justify-content-center justify-content-lg-end d-flex align-items-center">
               <Link to="https://www.facebook.com/profile.php?id=100028502835503">

@@ -19,7 +19,7 @@ const ContactInfo = () => {
               <i className="fas fa-map-marker-alt"></i>
             </div>
             <h5>Address</h5>
-            <p>ĐHCN ĐHQGHN</p>
+            <p>BTEC</p>
           </div>
         </div>
         <div className="col-12 col-md-4 contact-Box">
@@ -28,7 +28,7 @@ const ContactInfo = () => {
               <i className="fas fa-fax"></i>
             </div>
             <h5>Email</h5>
-            <p>dhcn@gmail.com</p>
+            <p>minhthong2003@gmail.com</p>
           </div>
         </div>
       </div>
