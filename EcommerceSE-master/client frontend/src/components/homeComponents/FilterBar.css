@@ -1,0 +1,18 @@
+/* I want filter-bar is the same row with other */
+
+.filter-bar {
+  display: inline-block;
+  margin: 10px;
+  margin-left: 50px;
+}
+
+.filter-by-option {
+  display: inline-block;
+  margin: 10px;
+}
+
+.filter-by-option__item {
+  display: inline-block;
+  margin: 10px;
+}
+
